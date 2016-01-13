@@ -28,7 +28,7 @@ for key in list({'x': 30, 'y': 15})[::-1]:
     pass
 ```
 
-[Read more](http://stackoverflow.com/q/509211/4633828) about list slicing!
+[Read more](http://stackoverflow.com/q/509211/4633828) about Python list slicing!
 
 ```javascript
 for (var key in {'x': 30, 'y': 15}) {
