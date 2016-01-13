@@ -5,6 +5,8 @@ This document assumes you have a perfect browser that generally supports all of 
 
 ## Loops
 
+**Loop through items of a list/array:**
+
 ```python
 for item in [1, 2, 3]:
     pass
@@ -15,6 +17,8 @@ for (var item of [1, 2, 3]) {
   // ...
 };
 ```
+
+**Loop through keys of a dictionary/object:**
 
 ```python
 for key in {"x": 30, "y": 15}:
@@ -36,4 +40,14 @@ for (var key in {"x": 30, "y": 15}) {
 for (var key of Object.keys({"x": 30, "y": 15}).reverse()) {
   // ...
 }
+```
+
+**Get indexes of a list/array:**
+
+```python
+range(len(['a', 'b', 'c'])) # [0, 1, 2]
+```
+
+```javascript
+['a', 'b', 'c'].map((_, i) => item) // [0, 1, 2]
 ```
