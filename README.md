@@ -23,19 +23,20 @@ for key in {"x": 30, "y": 15}:
     pass
 # properties order is reversed in python, wat?
 # you can make them go from left to right like this:
-keys = list({"x": 30, "y": 15})
-keys.reverse()
-for key in keys:
+# yay for list slicing
+for key in list({'x': 30, 'y': 15})[::-1]:
     pass
 ```
 
+[Read more](http://stackoverflow.com/q/509211/4633828) about list slicing!
+
 ```javascript
-for (var key in {"x": 30, "y": 15}) {
+for (var key in {'x': 30, 'y': 15}) {
   // ...
 }
 // or, replicate the reversed keys thing of Python
 // like this:
-for (var key of Object.keys({"x": 30, "y": 15}).reverse()) {
+for (var key of Object.keys({'x': 30, 'y': 15}).reverse()) {
   // ...
 }
 ```
@@ -48,4 +49,14 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 
 ```javascript
 ['a', 'b', 'c'].map((_, i) => item) // [0, 1, 2]
+```
+
+### Reverse list/array:
+
+```python
+['a', 'b', 'c'][::-1] # [0, 1, 2]
+```
+
+```javascript
+['a', 'b', 'c'].reverse()
 ```
