@@ -3,6 +3,26 @@ Todo.. :)
 
 This document assumes you have a perfect browser that generally supports all of ES6. That SHOULD be every browser, as ECMAScript2015/ES6 is the current standard, but for now unfortunately not all browsers implement everything. I personally always use the somewhat glitchy browsers [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html) and [Firefox Nightly](https://nightly.mozilla.org/)/[Developer Edition](https://www.mozilla.org/en-US/firefox/developer/). [Node.js 5](https://nodejs.org/en/blog/release/v5.0.0/) is also pretty good with ES6, and you can always use transpilers such as [Babel](https://babeljs.io/) or [Traceur](https://github.com/google/traceur-compiler).
 
+Python version 3.4 is used in the examples, except when otherwise mentioned.
+
+## Control Structures
+
+Note that `for` loops in Python will behave as if they used a `var` statement in JavaScript, so after the loop has exited the final value of the name used in the loop will be accessable, like so:
+
+```
+for item in ['a', 'b', 'c']:
+    pass
+
+print item # -> 'c'
+```
+
+```javascript
+for (var item of ['a', 'b', 'c']);
+console.log(item); // -> 'c'
+```
+
+However you would normally use `let` instead of `var` in a JavaScript loop statement as `let` helps gets rid of issues such as hoisting.
+
 ### Loop through items of a list/array:
 
 ```python
@@ -11,9 +31,7 @@ for item in [1, 2, 3]:
 ```
 
 ```javascript
-for (var item of [1, 2, 3]) {
-  // ...
-};
+for (let item of [1, 2, 3]);
 ```
 
 ### Loop through keys of a dictionary/object:
@@ -31,15 +49,13 @@ for key in list({'x': 30, 'y': 15})[::-1]:
 [Read more](http://stackoverflow.com/q/509211/4633828) about Python list slicing!
 
 ```javascript
-for (var key in {'x': 30, 'y': 15}) {
-  // ...
-}
+for (let key in {'x': 30, 'y': 15});
 // or, replicate the reversed keys thing of Python
 // like this:
-for (var key of Object.keys({'x': 30, 'y': 15}).reverse()) {
-  // ...
-}
+for (let key of Object.keys({'x': 30, 'y': 15}).reverse());
 ```
+
+## Array Handling
 
 ### Get indexes of a list/array:
 
