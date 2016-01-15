@@ -79,6 +79,30 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 ['a', 'b', 'c'].reverse()
 ```
 
+## String Handling
+
+### Split string
+
+```python
+'hello world'.split(' ') # ['hello', 'world']
+```
+
+```javascript
+'hello world'.split(' ') // ['hello', 'world']
+```
+
+### Join strings
+
+```python
+'hello' + ' world' // 'hello world'
+```
+
+```javascript
+'hello' + ' world' // 'hello world'
+// or:
+'hello'.concat(' world') // 'hello world'
+```
+
 ## Convert Types
 
 ### Convert to list/array:
