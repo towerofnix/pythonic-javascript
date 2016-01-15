@@ -78,3 +78,39 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 ```javascript
 ['a', 'b', 'c'].reverse()
 ```
+
+## Convert Types
+
+### Convert to list/array:
+
+```python
+list('hello') # ['h', 'e', 'l', 'l', 'o']
+```
+
+```javascript
+Array.from('hello') // ['h', 'e', 'l', 'l', 'o']
+```
+
+### Convert to string:
+
+```python
+str(34) # '34'
+```
+
+```javascript
+(34).toString() // '34'
+```
+
+### Convert to number:
+
+Note that Python will raise a ValueError on converting a string literal containing a decimal such as "15.4", while JavaScript will return an integer rounded down (`'15.7'` -> `15`).
+
+```python
+int('15') # 15
+float('34.75') # 34.75
+```
+
+```javascript
+parseInt('15') // 15
+parseFloat('34.75') // 34.75
+```
