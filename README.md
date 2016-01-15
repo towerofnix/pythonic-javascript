@@ -103,6 +103,44 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 'hello'.concat(' world') // 'hello world'
 ```
 
+## Number handling
+
+### Add, subtract, multiply, divide, exponetiate
+
+The JavaScript exponentiation operator (`**`) is part of ECMAScript 2016.
+
+```python
+3 - 2 # 1
+3 + 2 # 5
+3 * 2 # 6
+3 / 2 # 1.5, or 1 if using Python 2.7
+
+3 ** 2 # 9
+# or:
+pow(3, 2) # 9
+```
+
+```javascript
+3 - 2 // 1
+3 + 2 // 5
+3 * 2 // 6
+3 / 2 // 1.5
+
+3 ** 2 // 9
+// or:
+Math.pow(3, 2)
+```
+
+### Modulo (remainder division)
+
+```python
+8 % 3 # 2
+```
+
+```javascript
+8 % 3 // 2
+```
+
 ## Convert Types
 
 ### Convert to list/array:
