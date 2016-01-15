@@ -11,7 +11,7 @@ Python version 3.4 is used in the examples, except when otherwise mentioned.
 
 Note that `for` loops in Python will behave as if they used a `var` statement in JavaScript, so after the loop has exited the final value of the name used in the loop will be accessable, like so:
 
-```
+```python
 for item in ['a', 'b', 'c']:
     pass
 
