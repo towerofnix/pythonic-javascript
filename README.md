@@ -5,6 +5,8 @@ This document assumes you have a perfect browser that generally supports all of 
 
 Keep in mind that effectively nobody has these browsers [i.e., very few people who will be using your site or program] and you should always use transpilers such as [Babel](https://babeljs.io/) or [Traceur](https://github.com/google/traceur-compiler).
 
+You can use Babel right in your web browser (without the need of downloading or installing or compiling anything!) by using the [official online REPL](http://babeljs.io/repl/).
+
 Python version 3.4 is used in the examples, except when otherwise mentioned.
 
 **TODO:**
