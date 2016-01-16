@@ -13,7 +13,7 @@ Python version 3.4 is used in the examples, except when otherwise mentioned.
 * Special functions:
   * Generators
   * [(View)](#python-decorators) ~~Python Decorators~~
-  * [ES2016 JavaScript Decorators](https://github.com/wycats/javascript-decorators/), maybe?
+  * [ES2016 JavaScript Class Property Decorators](https://github.com/wycats/javascript-decorators/), maybe?
 
 ## Special functions
 
