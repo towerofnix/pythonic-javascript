@@ -1,11 +1,68 @@
 # Pythonic JavaScript
-Todo.. :)
+A document showing similarities (and differences) between Python and JavaScript code.
 
 This document assumes you have a perfect browser that generally supports all of ES6. That SHOULD be every browser, as ECMAScript2015/ES6 is the current standard, but for now unfortunately not all browsers implement everything. I personally always use the somewhat glitchy browsers [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html) and [Firefox Nightly](https://nightly.mozilla.org/)/[Developer Edition](https://www.mozilla.org/en-US/firefox/developer/). [Node.js 5](https://nodejs.org/en/blog/release/v5.0.0/) (generally with the `--harmony` flag) is also pretty good with ES6.
 
 Keep in mind that effectively nobody has these browsers [i.e., very few people who will be using your site or program] and you should always use transpilers such as [Babel](https://babeljs.io/) or [Traceur](https://github.com/google/traceur-compiler).
 
 Python version 3.4 is used in the examples, except when otherwise mentioned.
+
+**TODO:**
+* Special functions:
+  * Generators
+  * [(View)](#python-decorators) ~~Python Decorators~~
+  * [ES2016 JavaScript Decorators](https://github.com/wycats/javascript-decorators/), maybe?
+
+## Special functions
+
+### Python Decorators
+
+```python
+def wrapper_decorator(f):
+    def inner(*args, **kw):
+        print "Hey, you called me!"
+        return f(*args, **kw)
+    return inner
+
+@wraper_decorator
+def my_function(x):
+    return x * 2
+
+my_function(6) # "Hey, you called me!" gets printed and 6 is returned
+
+# or, you can wrap my_function like this:
+def my_function(x):
+    return x * 2
+my_function = wrapper_decorator(my_function)
+```
+
+```javascript
+function wrapperDecorator(f) {
+    function inner(...args) {
+        console.log("Hey, you called me!");
+        return f(...args);
+    }
+    return inner;
+}
+
+function myFunction(x) {
+    return x * 2;
+} myFunction = wrapperDecorator(myFunction);
+
+myFunction(3); // "Hey, you called me!" gets logged and 6 is returned
+
+// The above can be simplified with function expressions (and also
+// arrow functions):
+
+function wrapperDecorator(f) {
+    return (...args) => {
+        console.log("Hey, you called me!");
+        return f(...args);
+    };
+}
+
+const myFunction = wrapperDecorator(x => x * 2);
+```
 
 ## Control Structures
 
