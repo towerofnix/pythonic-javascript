@@ -14,6 +14,8 @@ Python version 3.4 is used in the examples, except when otherwise mentioned.
   * Generators
   * [(View)](#python-decorators) ~~Python Decorators~~
   * [ES2016 JavaScript Class Property Decorators](https://github.com/wycats/javascript-decorators/), maybe?
+* Uncategorized (as of yet):
+  * JSON parsifying/stringifying
 
 ## Special functions
 
