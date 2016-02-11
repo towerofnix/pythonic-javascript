@@ -152,6 +152,8 @@ for (let key of Object.keys({'x': 30, 'y': 15}).reverse()) {
 
 ### Loop through entries
 
+The JavaScript `Object.entries` method is [part of ES7](https://github.com/tc39/proposal-object-values-entries).
+
 ```python
 for index, item in enumerate(['a', 'b', 'c']):
     print(index, item)
