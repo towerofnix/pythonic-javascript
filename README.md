@@ -191,11 +191,11 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 ### Reverse list/array:
 
 ```python
-['a', 'b', 'c'][::-1] # [0, 1, 2]
+['a', 'b', 'c'][::-1] # ['c', 'b', 'a']
 ```
 
 ```javascript
-['a', 'b', 'c'].reverse()
+['a', 'b', 'c'].reverse() // ['c', 'b', 'a']
 ```
 
 ## String Handling
@@ -224,7 +224,7 @@ range(len(['a', 'b', 'c'])) # [0, 1, 2]
 
 ## Number handling
 
-### Add, subtract, multiply, divide, exponetiate
+### Add, subtract, multiply, divide, exponentiate
 
 The JavaScript exponentiation operator (`**`) is part of ECMAScript 2016.
 
