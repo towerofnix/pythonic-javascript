@@ -30,13 +30,13 @@ Python version 3.4 is used in the examples, except when otherwise mentioned.
 ### Python Decorators
 
 ```python
-def wrapper_decorator(f):
+def wrapper(f):
     def inner(*args, **kw):
         print "Hey, you called me!"
         return f(*args, **kw)
     return inner
 
-@wraper_decorator
+@wrapper
 def my_function(x):
     return x * 2
 
@@ -45,35 +45,35 @@ my_function(6) # "Hey, you called me!" gets printed and 6 is returned
 # or, you can wrap my_function like this:
 def my_function(x):
     return x * 2
-my_function = wrapper_decorator(my_function)
+my_function = wrapper(my_function)
 ```
 
 ```javascript
-function wrapperDecorator(f) {
-    function inner(...args) {
-        console.log("Hey, you called me!");
-        return f(...args);
-    }
-    return inner;
+function wrapper(f) {
+  function inner(...args) {
+    console.log("Hey, you called me!");
+    return f(...args);
+  }
+  return inner;
 }
 
 function myFunction(x) {
-    return x * 2;
-} myFunction = wrapperDecorator(myFunction);
+  return x * 2;
+} myFunction = wrapper(myFunction);
 
 myFunction(3); // "Hey, you called me!" gets logged and 6 is returned
 
 // The above can be simplified with function expressions (and also
 // arrow functions):
 
-function wrapperDecorator(f) {
-    return (...args) => {
-        console.log("Hey, you called me!");
-        return f(...args);
-    };
+function wrapper(f) {
+  return (...args) => {
+    console.log("Hey, you called me!");
+    return f(...args);
+  };
 }
 
-const myFunction = wrapperDecorator(x => x * 2);
+const myFunction = wrapper(x => x * 2);
 ```
 
 ## Control Structures
@@ -98,11 +98,19 @@ However you would normally use `let` instead of `var` in a JavaScript loop state
 
 ```python
 for item in [1, 2, 3]:
-    pass
+    print(item)
+# -> 1
+# -> 2
+# -> 3
 ```
 
 ```javascript
-for (let item of [1, 2, 3]);
+for (let item of [1, 2, 3]) {
+  console.log(item);
+}
+// -> 1
+// -> 2
+// -> 3
 ```
 
 ### Loop through keys of a dictionary/object:
