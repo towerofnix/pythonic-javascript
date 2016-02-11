@@ -109,21 +109,71 @@ for (let item of [1, 2, 3]);
 
 ```python
 for key in {"x": 30, "y": 15}:
-    pass
-# properties order is reversed in python, wat?
-# you can make them go from left to right like this:
-# yay for list slicing
+    print(key)
+# -> y
+# -> x
+
+# properties order is reversed in python, hmm..
+# normally this doesn't matter, but you can make
+# them go from left to right like this:
+# (yay for list slicing)
 for key in list({'x': 30, 'y': 15})[::-1]:
-    pass
+    print(key)
+# -> x
+# -> y
 ```
 
 [Read more](http://stackoverflow.com/q/509211/4633828) about Python list slicing!
 
 ```javascript
-for (let key in {'x': 30, 'y': 15});
+for (let key in {'x': 30, 'y': 15}) {
+  console.log(key);
+}
+// -> x
+// -> y
+
 // or, replicate the reversed keys thing of Python
 // like this:
-for (let key of Object.keys({'x': 30, 'y': 15}).reverse());
+for (let key of Object.keys({'x': 30, 'y': 15}).reverse()) {
+  console.log(key);
+}
+// -> y
+// -> x
+// again, this shouldn't matter, but just in case.
+```
+
+### Loop through entries
+
+```python
+for index, item in enumerate(['a', 'b', 'c']):
+    print(index, item)
+# -> 0 a
+# -> 1 b
+# -> 2 c
+
+for index, item in {'x': 42, 'y': False}.items():
+    print(index, item)
+# -> y False
+# -> x 42
+
+# in Python 2, use list#iteritems
+```
+
+```javascript
+for (let [index, item] of ['a', 'b', 'c'].entries()) {
+  console.log(index, item);
+}
+// -> 0 a
+// -> 1 b
+// -> 2 c
+
+// objects don't have an "entries" method, only arrays -
+// use the Object.entries method for objects and such:
+for (let [key, value] of Object.entries({x: 42, y: false})) {
+  console.log(key, value);
+}
+// -> x 42
+// -> y false
 ```
 
 ## Array Handling
@@ -182,7 +232,7 @@ The JavaScript exponentiation operator (`**`) is part of ECMAScript 2016.
 3 - 2 # 1
 3 + 2 # 5
 3 * 2 # 6
-3 / 2 # 1.5, or 1 if using Python 2.7
+3 / 2 # 1.5, or 1 if using Python 2
 
 3 ** 2 # 9
 # or:
