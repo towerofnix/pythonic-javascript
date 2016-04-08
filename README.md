@@ -40,7 +40,7 @@ def wrapper(f):
 def my_function(x):
     return x * 2
 
-my_function(6) # "Hey, you called me!" gets printed and 6 is returned
+my_function(6) # "Hey, you called me!" gets printed and 12 is returned
 
 # or, you can wrap my_function like this:
 def my_function(x):
@@ -61,7 +61,7 @@ function myFunction(x) {
   return x * 2;
 } myFunction = wrapper(myFunction);
 
-myFunction(3); // "Hey, you called me!" gets logged and 6 is returned
+myFunction(6); // "Hey, you called me!" gets logged and 12 is returned
 
 // The above can be simplified with function expressions (and also
 // arrow functions):
